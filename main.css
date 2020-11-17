@@ -1,0 +1,510 @@
+/* for hamburger menu */
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+/*  for hamburger menu lines */
+.menu-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #fff;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+
+/* hamburger menu lines animation when clicked child 1,2,3. */
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 100%;
+  visibility: hidden;
+}
+
+.menu.show {
+  visibility: visible;
+}
+.menu-branding,
+.menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+/* navbar animation right side */
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: #373737;
+  list-style: none;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.5s ease-out;
+}
+.menu-nav.show {
+  transform: translate3d(0, 0, 0);
+}
+
+.menu .nav-item {
+  transform: translate3d(600px, 0, 0);
+  transition: all 0.5s ease-out;
+}
+.menu .nav-item.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu .nav-item.current > a {
+  color: #0079f2;
+}
+.menu .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+.menu .nav-link:hover {
+  transform: scale(1.25);
+}
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* HOME PAGE  */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.background-color {
+  background: linear-gradient(-300deg, #0c539b, #2b2b2b);
+}
+
+/* for background image on index page */
+#bg-img {
+  background-image: url("images/7_Background_image.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
+  font-size: 4rem;
+}
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0rem 0.2rem;
+  display: flex;
+  width: 40%;
+  background: rgba(73, 73, 73, 0.5);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: black;
+  font-weight: bold;
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+}
+main .icons {
+  margin-top: 1rem;
+}
+main .icons a {
+  color: white;
+  padding: 0.4rem;
+  width: 20px;
+}
+
+.fa i {
+  color: #035ab1;
+  width: 20%;
+  height: 120%;
+}
+
+main .icons a:hover {
+  color: black;
+  transition: all 0.3s ease-out;
+}
+main#home {
+  overflow: hidden;
+}
+main#home h1 {
+  margin-top: 20vh;
+}
+
+/* ABOUT ME PAGE */
+#about {
+  background: rgba(73, 73, 73, 0.5);
+}
+.about-info {
+  display: grid;
+  grid-template-areas: " bio-image . . .";
+  grid-gap: 50px 30px;
+  background-color: none;
+  padding: 10px;
+}
+
+.about-info .job {
+  background: #515151;
+  padding: 0.5rem;
+  border-bottom: #0079f2 8px solid;
+}
+
+.about-info .bio-image {
+  grid-area: bio-image;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border-radius: 70%;
+  border: #035ab1 5px solid;
+  overflow: hidden;
+}
+
+.about-info .bio {
+  box-sizing: border-box;
+  padding: 20px 20px;
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  font-size: 1.5rem;
+  max-width: 100%;
+  margin-left: 15px;
+  background: #515151;
+  border-bottom: #0079f2 8px solid;
+}
+.about-info .job-1 {
+  text-align: center;
+  padding: 20px 0;
+}
+.about-info .job-2 {
+  text-align: center;
+  padding: 20px 0;
+}
+.about-info .job-3 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.about-info .job-4 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* MY WORK PAGE */
+
+#work {
+  background: rgba(73, 73, 73, 0.5);
+}
+
+.innerProject {
+  margin-top: 20px;
+  display: grid;
+  grid-template-areas: " item1 item2 ";
+  grid-column-gap: 50px;
+  background-color: none;
+  padding: 5px;
+}
+
+/* Portfolio website */
+.item1 {
+  grid-area: item1;
+  font-size: 20px;
+}
+
+/* BucketList website */
+.item2 {
+  grid-area: item2;
+  font-size: 20px;
+}
+
+.innerProject img {
+  opacity: 0.8;
+  width: 100%;
+  height: auto;
+  border: 3px #fff solid;
+}
+.innerProject img:hover {
+  opacity: 0.5;
+  border-color: #0079f2;
+  transition: all 0.5s ease-out;
+}
+
+/* CONTACT ME PAGE */
+#contact {
+  background: rgba(73, 73, 73, 0.5);
+}
+
+.boxes {
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+}
+.boxes div {
+  width: 35%;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.3rem 0.3rem;
+  color: #000;
+}
+.boxes div:hover span {
+  color: #000;
+}
+
+.btn,
+.btn-dark,
+.btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.btn:hover,
+.btn-dark:hover,
+.btn-light:hover {
+  background: #0079f2;
+  color: #000;
+}
+
+.btn-dark {
+  background: black;
+  color: #fff;
+}
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  h2.sm-heading {
+    position: relative;
+    left: 73px;
+    width: 400px;
+  }
+  div.menu-branding {
+    width: 0%;
+    height: 0%;
+  }
+  ul.menu-nav {
+    float: none;
+    width: 100%;
+    height: 600px;
+    min-height: 0;
+    overflow-y: hidden;
+  }
+  ul.menu-nav.show,
+  div.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  .menu-branding .portrait {
+    width: 150px;
+    height: 150px;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+  main #home h1 {
+    margin-top: 20vh;
+  }
+  main .lg-heading {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+  h2.sm-heading {
+    position: relative;
+    left: 12px;
+    width: 400px;
+  }
+
+  /* about section */
+  .about-info {
+    grid-template-areas: "1" "2" "3" "4" "5" "6";
+    grid-gap: 10px;
+    background-color: none;
+    padding: 10px 10px;
+  }
+
+  .about-info .bio-image {
+    grid-area: 1;
+    display: none;
+  }
+
+  .about-info .bio {
+    grid-area: 2;
+    font-size: 1.2rem;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #515151;
+    border-bottom: #0079f2 8px solid;
+  }
+  .about-info .job-1 {
+    grid-area: 3;
+    margin-top: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .about-info .job-2 {
+    grid-area: 4;
+    text-align: center;
+  }
+  .about-info .job-3 {
+    grid-area: 5;
+    text-align: center;
+  }
+
+  .about-info .job-4 {
+    grid-area: 6;
+    text-align: center;
+  }
+
+  /* Project Section */
+  .innerProject {
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas: " item1" " item2 ";
+    grid-row-gap: 50px;
+    background-color: none;
+    padding: 5px;
+  }
+
+  /* Portfolio website */
+  .item1 {
+    grid-area: item1;
+    font-size: 20px;
+  }
+
+  /* BucketList website */
+  .item2 {
+    grid-area: item2;
+    font-size: 20px;
+  }
+
+  .innerProject img {
+    opacity: 0.8;
+    width: 100%;
+    height: auto;
+    border: 3px #fff solid;
+  }
+  .innerProject img:hover {
+    opacity: 0.5;
+    border-color: #0079f2;
+    transition: all 0.5s ease-out;
+  }
+
+  .boxes div {
+    position: relative;
+    left: 35px;
+    width: 85%;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+    margin-top: 30px;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease-out;
+  }
+}
